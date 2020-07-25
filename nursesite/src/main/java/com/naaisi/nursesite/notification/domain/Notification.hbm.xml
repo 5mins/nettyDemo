@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+ <hibernate-mapping>
+	 <!-- 建立类和表的映射 -->
+	 <class name="com.naaisi.nursesite.notification.domain.Notification" table="Notification" >
+	 	<!-- 建立类中的属性与表中的主键对应 -->
+	 	<id name="ID" column="ID">
+	 		<generator class="native"/>
+	 	</id>
+	 	
+	 	<!-- 建立类中普通属性与表中的字段对应 -->
+	 	<property name="TITLE" column="TITLE"  />
+	 	<property name="CONTENT" column="CONTENT"  />
+	 	<property name="TYPE" column="TYPE"  />
+	 	<property name="STATE" column="STATE"  />
+	 	<property name="CREATED_TIME" column="CREATED_TIME"  />
+		<property name="CREATED_BY" column="CREATED_BY"  />
+
+	 </class>
+ </hibernate-mapping>

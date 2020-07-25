@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+	 <!-- 建立类和表的映射 -->
+	 <class name="com.naaisi.nursesite.docadvice.domain.DocAdvice" table="DocAdvice" >
+	 	<!-- 建立类中的属性与表中的主键对应 -->
+	 	<id name="ID" column="ID"  >
+	 		<generator class="native"/>
+	 	</id>
+	 	
+
+	 	
+	 	<!-- 建立类中普通属性与表中的字段对应 -->
+	 	<property name="PATIENT_ID" column="PATIENT_ID"  />
+	 	<property name="ADVICE" column="ADVICE"  />
+	 	<property name="PRE_EXE_TIME" column="PRE_EXE_TIME"  />
+	 	<property name="EXE_TIME" column="EXE_TIME"  />
+	 	<property name="STATE" column="STATE"  />
+	 	<property name="EXECUTOU" column="EXECUTOU"  />
+	 	<property name="COMMENT" column="COMMENT"  />
+	 	<property name="TYPE" column="TYPE"  />
+	 	<property name="PUBLISH_TIME" column="PUBLISH_TIME"  />
+	<!-- 多对一映射    cascade="save-update" 级联操作
+	<many-to-one name="nurse" class="com.naaisi.nursesite.nurse.domain.Nurse" column="ID" cascade="save-update" insert="false" update="false"></many-to-one>
+	-->
+	 </class>
+ </hibernate-mapping>

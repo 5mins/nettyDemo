@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+	 <!-- 建立类和表的映射 -->
+	 <class name="com.naaisi.nursesite.eat.domain.Eat" table="Eat" >
+	 	<!-- 建立类中的属性与表中的主键对应 -->
+	 	<id name="ID" column="ID">
+	 		<generator class="native"/>
+	 	</id>
+	 	
+
+	 	
+	 	<!-- 建立类中普通属性与表中的字段对应 -->
+	 	<property name="PATIENT_ID" column="PATIENT_ID"  />
+	 	<property name="DRUG" column="DRUG"  />
+	 	<property name="PRE_EXE_TIME" column="PRE_EXE_TIME"  />
+	 	<property name="EXE_TIME" column="EXE_TIME"  />
+	 	<property name="STATE" column="STATE"  />
+	 	<property name="FREQUENCY" column="FREQUENCY"  />
+	 	<property name="PUBLISH_TIME" column="PUBLISH_TIME"  />
+
+
+	 </class>
+ </hibernate-mapping>
