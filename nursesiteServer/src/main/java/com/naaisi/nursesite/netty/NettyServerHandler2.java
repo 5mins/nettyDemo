@@ -100,7 +100,7 @@ public class NettyServerHandler2 extends SimpleChannelInboundHandler<MessageProt
 					public void run() {
 
 						try {
-							// Thread.sleep(2 * 1000);//费事的任务
+							// Thread.sleep(2 * 1000);//模拟费时的任务
 							BusinessHandle msh = new BusinessHandle();
 							String result = (String) msh.exeNormal(Mymsg);// 只处理普通任务 ，供测试用
 							// ctx.writeAndFlush(Unpooled.copiedBuffer(result, CharsetUtil.UTF_8));//????

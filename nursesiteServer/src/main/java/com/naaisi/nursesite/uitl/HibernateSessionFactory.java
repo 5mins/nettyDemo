@@ -38,17 +38,16 @@ public class HibernateSessionFactory {
 		return session;
 	}
 
-//public static void rebuildSessionFactory() {
-//try {
-//configuration.configure(configFile);//读取配置文件
-//sessionFactory = 
-//  configuration.buildSessionFactory();//根据配置文件创建sessionFactory对象
-//} catch (Exception e) {
-//System.err
-//      .println("%%%% Error Creating SessionFactory %%%%");
-//e.printStackTrace();
-//}
-//}
+	public static void rebuildSessionFactory() {
+		try {
+			configuration.configure(configFile);//读取配置文件
+			sessionFactory = configuration.buildSessionFactory();//根据配置文件创建sessionFactory对象
+		}catch (Exception e) {
+			System.err.println("%%%% Error Creating SessionFactory %%%%");
+			e.printStackTrace();
+		}
+	}
+	
 	public static void closeSession() throws HibernateException {
 		Session session = (Session) threadLocal.get();// 从ThreadLocal对象中获得Session对象
 		threadLocal.set(null);// 将当前线程Session对象从ThreadLocal对象中移除
