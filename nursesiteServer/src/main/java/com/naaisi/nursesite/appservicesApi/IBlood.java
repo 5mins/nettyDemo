@@ -11,7 +11,7 @@ import com.naaisi.nursesite.blood.domain.Blood;
 public interface IBlood {
 
 	/**
-	 *  添加存储一个blood记录1
+	 *  添加存储一个blood记录
 	 * 
 	 * @param 
 	 * @return
